@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PACK_DIR=`cd $(dirname $0)/..; pwd`
+
+bundle install --without nothing --path vendor/bundle --no-deployment
+
+bundle exec rspec -r $PACK_DIR/opt/rspec/junit_formatter.rb -f JUnit -o results.xml
