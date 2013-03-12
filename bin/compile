@@ -17,6 +17,6 @@ bundle install --without nothing --path vendor/bundle
 echo "--format RspecJunitFormatter" >> .rspec
 echo "--out rspec.xml" >> .rspec
 
-bundle exec rspec
+bundle exec rake test
 
 echo "done"
