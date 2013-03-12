@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-if [ -f Rakefile ]
+if [ -f Rakefile ]; then
   echo 'Rake' && exit 0
-elsif
+else
   echo 'no' && exit 1
 fi
