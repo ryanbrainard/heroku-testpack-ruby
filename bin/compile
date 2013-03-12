@@ -8,12 +8,15 @@ chmod +x .profile.d/ruby.sh
 . .profile.d/ruby.sh
 export RACK_ENV=test
 
-echo "gem 'builder'" >> Gemfile
+echo "gem 'rspec_junit_formatter'" >> Gemfile
 
 # Why isn't --no-deployment not working?
 rm -rf .bundle/config
 bundle install --without nothing --path vendor/bundle
 
-bundle exec rspec -r "$PACK_DIR/opt/rspec/junit_formatter.rb" -f JUnit -o results.xml
+echo "--format RspecJunitFormatter" >> .rspec
+echo "--out rspec.xml" >> .rspec
+
+bundle exec rspec
 
 echo "done"
