@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 PACK_DIR=`cd $(dirname $0)/..; pwd`
+HOME=$1
 
 # TODO: run for all files in .profile.d?
 chmod +x .profile.d/ruby.sh
