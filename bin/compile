@@ -15,3 +15,5 @@ rm -rf .bundle/config
 bundle install --without nothing --path vendor/bundle
 
 bundle exec rspec -r "$PACK_DIR/opt/rspec/junit_formatter.rb" -f JUnit -o results.xml
+
+echo "done"
