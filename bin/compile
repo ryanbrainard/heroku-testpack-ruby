@@ -12,7 +12,7 @@ echo "gem 'rspec_junit_formatter'" >> Gemfile
 
 # Why isn't --no-deployment not working?
 rm -rf .bundle/config
-bundle install --without nothing --path vendor/bundle
+bundle install --without development --path vendor/bundle
 
 echo "--format RspecJunitFormatter" >> .rspec
 echo "--out rspec.xml" >> .rspec
