@@ -19,4 +19,6 @@ echo "--out rspec.xml" >> .rspec
 
 bundle exec rake test
 
+rm -rf .bundle vendor
+
 echo "done"
